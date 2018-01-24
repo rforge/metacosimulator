@@ -40,7 +40,6 @@
 }
 \author{Franck Jabot}
 \seealso{
-  \code{\link{binary_model}}, \code{\link{binary_model_cluster}}, \code{\link{ABC_sequential}}, \code{\link{ABC_mcmc}}
 }
 \examples{
     ##### EXAMPLE 1 #####
@@ -50,8 +49,7 @@
     ## artificial example to show how to use the 'Msim' function.
     parameters=1:4
     stats_output=array(0,4)
-    Msim(parameters,stats_output)
-    stats_output
+    Msim(parameters,stats_output)$stats_output
 }
 \keyword{abc}
 \keyword{model}
