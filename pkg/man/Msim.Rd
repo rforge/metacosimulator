@@ -51,6 +51,4 @@
     stats_output=array(0,4)
     Msim(parameters,stats_output)$stats_output
 }
-\keyword{abc}
-\keyword{model}
-\keyword{inference}
+

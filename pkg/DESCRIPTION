@@ -5,6 +5,7 @@ Description: TODO
 Title: TODO
 Author: Franck
 Maintainer: Franck Jabot <franck.jabot@irstea.fr>
-Imports: Rcpp (>= 0.12.15)
-LinkingTo: Rcpp
+Imports: Rcpp (>= 0.11.0)
+LinkingTo: Rcpp, RcppGSL
+
 

@@ -1,4 +1,8 @@
-PKG_CFLAGS=`gsl-config --cflags`
-#PKG_LIBS=`gsl-config --libs`
-PKG_LIBS = `$(R_HOME)/bin/Rscript -e "Rcpp:::LdFlags()"` `gsl-config --libs`
 
+# set by configure
+GSL_CFLAGS = -I/usr/include
+GSL_LIBS   = -L/usr/lib -lgsl -lgslcblas -lm
+
+# combine with standard arguments for R
+PKG_CPPFLAGS = $(GSL_CFLAGS)
+PKG_LIBS = $(GSL_LIBS) 

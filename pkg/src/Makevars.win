@@ -1,8 +1,3 @@
-# From https://github.com/eddelbuettel/rcppziggurat/blob/master/src/Makevars.win
-# PKG_CPPFLAGS = -I. -I../inst/include
-## Use the R_HOME indirection to support installations of multiple R version
-# PKG_LIBS = $(shell "${R_HOME}/bin${R_ARCH_BIN}/Rscript.exe" -e "RcppGSL:::LdFlags()")
-
-# From http://dirk.eddelbuettel.com/code/rcpp.html
-#PKG_CXXFLAGS=`${R_HOME}/bin/Rscript -e "Rcpp:::CxxFlags()"`
-#PKG_LIBS=`${R_HOME}/bin/Rscript -e "Rcpp:::LdFlags()"`
+## This assumes that the LIB_GSL variable points to working GSL libraries
+PKG_CPPFLAGS=-I$(LIB_GSL)/include
+PKG_LIBS=-L$(LIB_GSL)/lib -lgsl -lgslcblas 
